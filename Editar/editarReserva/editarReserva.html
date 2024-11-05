@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Reserva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Pet</h1>
+        <div class="user-info">João da Silva</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Pet">Pet</a></li>
+            <li><a href="Usuarios">Usuários</a></li>
+            <li><a href="Configuracoes">Configurações</a></li>
+            <li><a href="Reservas" class="active">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            Home / reservas / editar reserva
+        </div>
+        
+        <h2>Editar reserva</h2>
+        
+        <form class="reservation-form">
+            <div>
+                <label for="proprietario">Proprietário *</label>
+                <input type="text" id="proprietario" value="José da Silva">
+            </div>
+            <div>
+                <label for="pet">Pet *</label>
+                <input type="text" id="pet" value="Max">
+            </div>
+            <div>
+                <label for="periodo">Período *</label>
+                <input type="date" id="inicio" value="2021-05-02">
+                <input type="date" id="fim" value="2021-05-07">
+            </div>
+            <div>
+                <label for="notas">Notas</label>
+                <textarea id="notas" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+            </div>
+            <div>
+                <label for="status">Status*</label>
+                <select id="status">
+                    <option>Em andamento</option>
+                    <option>Concluído</option>
+                    <option>Cancelado</option>
+                </select>
+            </div>
+            <div>
+                <label for="anotacoes">Anotações do funcionário</label>
+                <textarea id="anotacoes" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+            </div>
+            <div class="image-upload">
+                <label>Foto do pet</label>
+                <div class="image-placeholder">[Imagem]</div>
+                <button type="button" class="add-image">+</button>
+            </div>
+            <div class="total">
+                <p>Total das diárias: <strong>R$ 40,00</strong></p>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="save-button">Salvar</button>
+                <button type="reset" class="clear-button">Limpar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

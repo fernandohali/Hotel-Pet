@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Configuracoes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hotel Pet</h1>
+            <div class="user-info">
+                <span>João da Silva</span>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="pet.html">Pet</a></li>
+                <li><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="configuracoes.html" class="active">Configuracoes</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Configurações</h2>
+            <form class="settings-form">
+                <label for="diaria">Valor da diária *</label>
+                <input type="text" id="diaria" name="diaria" value="R$ 10,00" required>
+                
+                <label for="vagas">Vagas disponíveis *</label>
+                <input type="number" id="vagas" name="vagas" value="3" required>
+                
+                <button type="submit">Salvar</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
