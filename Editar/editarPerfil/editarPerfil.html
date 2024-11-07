@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Pet - Editar Perfil</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
+      <!-- Barra Lateral -->
+      <nav>
+        <ul>
+          <li><a href="pet.html">Pet</a></li>
+          <li><a href="usuarios.html">Usuários</a></li>
+          <li><a href="configuracoes.html">Configurações</a></li>
+          <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Conteúdo Principal -->
+      <main>
         <header>
-            <h1>Hotel Pet</h1>
-            <div class="user-info">
-                <span>João da Silva</span>
-            </div>
+          <h1>Hotel Pet</h1>
+          <div class="user-info">João da Silva</div>
         </header>
-        <nav>
-            <ul>
-                <li><a href="pet.html">Pet</a></li>
-                <li><a href="usuarios.html">Usuarios</a></li>
-                <li><a href="configuracoes.html">Configuracoes</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
-            </ul>
+
+        <nav class="breadcrumb">
+          <a href="home.html">Home</a> / <a href="pet.html">Pet</a> /
+          <span>Editar Perfil</span>
         </nav>
-        <main>
-            <nav class="breadcrumb">
-                <a href="home.html">Home</a> / 
-                <a href="pet.html">Pet</a> / 
-                <span>Editar Pergil</span>
-            </nav>
-            <h2>Editar Perfil</h2>
-            <form class="edit-profile-form">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" value="joaodasilva@pet.com" required>
 
-                <label for="nome">Nome *</label>
-                <input type="text" id="nome" name="nome" value="João" required>
+        <h2>Editar Perfil</h2>
 
-                <label for="sobrenome">Sobrenome</label>
-                <input type="text" id="sobrenome" name="sobrenome" value="da Silva">
+        <!-- Formulário de Edição de Perfil -->
+        <form class="edit-profile-form">
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value="joaodasilva@pet.com"
+            required
+          />
 
-                <label for="telefone">Telefone *</label>
-                <input type="text" id="telefone" name="telefone" value="+55 (73) 99876-8943" required>
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" name="nome" value="João" required />
 
-                <label for="funcao">Função</label>
-                <select id="funcao" name="funcao">
-                    <option value="funcionario">Funcionário</option>
-                    <option value="cliente">Cliente</option>
-                    <option value="gerente">Gerente</option>
-                </select>
+          <label for="sobrenome">Sobrenome</label>
+          <input type="text" id="sobrenome" name="sobrenome" value="da Silva" />
 
-                <button type="submit">Salvar</button>
-                <button type="reset">Limpar</button>
-            </form>
-        </main>
+          <label for="telefone">Telefone *</label>
+          <input
+            type="text"
+            id="telefone"
+            name="telefone"
+            value="+55 (73) 99876-8943"
+            required
+          />
+
+          <label for="funcao">Função</label>
+          <select id="funcao" name="funcao">
+            <option value="funcionario">Funcionário</option>
+            <option value="cliente">Cliente</option>
+            <option value="gerente">Gerente</option>
+          </select>
+
+          <button type="submit">Salvar</button>
+          <button type="reset">Limpar</button>
+        </form>
+      </main>
     </div>
-</body>
+  </body>
 </html>

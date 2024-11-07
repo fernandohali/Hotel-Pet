@@ -1,59 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Pet - Editar Reserva</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
+      <!-- Barra de Navegação Lateral -->
+      <nav class="sidebar">
+        <ul>
+          <li><a href="pet.html">Pet</a></li>
+          <li><a href="usuarios.html">Usuários</a></li>
+          <li><a href="configuracoes.html">Configurações</a></li>
+          <li><a href="reservas.html" class="active">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Conteúdo Principal -->
+      <div class="main-content">
         <header>
-            <h1>Hotel Pet</h1>
-            <div class="user-info">
-                <span>João da Silva</span>
-            </div>
+          <h1>Hotel Pet</h1>
+          <div class="user-info">
+            <span>João da Silva</span>
+          </div>
         </header>
-        <nav>
-            <ul>
-                <li><a href="pet.html">Pet</a></li>
-                <li><a href="usuarios.html">Usuarios</a></li>
-                <li><a href="configuracoes.html">Configuracoes</a></li>
-                <li><a href="reservas.html" class="active">Reservas</a></li>
-            </ul>
-        </nav>
+
         <main>
-            <h2>Editar Reserva</h2>
-            <form class="edit-reservation-form">
-                <label for="proprietario">Proprietário</label>
-                <input type="text" id="proprietario" name="proprietario" value="José da Silva" readonly>
-                
-                <label for="pet">Pet</label>
-                <input type="text" id="pet" name="pet" value="Max" readonly>
-                
-                <label for="inicio">Início</label>
-                <input type="date" id="inicio" name="inicio" value="2021-05-02" required>
-                
-                <label for="fim">Fim</label>
-                <input type="date" id="fim" name="fim" value="2021-05-07" required>
-                
-                <label for="notas">Notas</label>
-                <textarea id="notas" name="notas">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
-                
-                <label for="status">Status</label>
-                <input type="text" id="status" name="status" value="Finalizada" readonly>
-                
-                <div class="total">
-                    <p>Total das diárias: R$ 40,00</p>
-                </div>
-                
-                <button type="button" onclick="addNotaFiscal()">Adicionar Nota Fiscal</button>
-                <a href="recibo.pdf" download>recibo.pdf</a>
-                
-                <button type="submit">Salvar</button>
-                <button type="reset">Limpar</button>
-            </form>
+          <h2>Editar Reserva</h2>
+          <form class="edit-reservation-form">
+            <label for="proprietario">Proprietário</label>
+            <input
+              type="text"
+              id="proprietario"
+              name="proprietario"
+              value="José da Silva"
+              readonly
+            />
+
+            <label for="pet">Pet</label>
+            <input type="text" id="pet" name="pet" value="Max" readonly />
+
+            <label for="inicio">Início</label>
+            <input
+              type="date"
+              id="inicio"
+              name="inicio"
+              value="2021-05-02"
+              required
+            />
+
+            <label for="fim">Fim</label>
+            <input
+              type="date"
+              id="fim"
+              name="fim"
+              value="2021-05-07"
+              required
+            />
+
+            <label for="notas">Notas</label>
+            <textarea id="notas" name="notas">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea
+            >
+
+            <label for="status">Status</label>
+            <input
+              type="text"
+              id="status"
+              name="status"
+              value="Finalizada"
+              readonly
+            />
+
+            <div class="total">
+              <p>Total das diárias: R$ 40,00</p>
+            </div>
+
+            <button type="button" onclick="addNotaFiscal()">
+              Adicionar Nota Fiscal
+            </button>
+            <a href="recibo.pdf" download>Recibo PDF</a>
+
+            <button type="submit">Salvar</button>
+            <button type="reset">Limpar</button>
+          </form>
         </main>
+      </div>
     </div>
-</body>
+
+    <script>
+      function addNotaFiscal() {
+        alert("Nota Fiscal adicionada com sucesso!");
+      }
+    </script>
+  </body>
 </html>

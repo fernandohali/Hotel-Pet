@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contêiner principal */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Barra de navegação à esquerda */
+nav {
+  width: 200px;
+  background-color: #007bff;
+  padding: 20px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #0056b3;
+}
+
+nav a.active {
+  font-weight: bold;
+  background-color: #0056b3;
+}
+
+/* Conteúdo principal */
+main {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 220px;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+.user-info {
+  font-size: 16px;
+}
+
+/* Navegação de Caminho (Breadcrumb) */
+.breadcrumb {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #333;
+}
+
+/* Formulário de Edição de Perfil */
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.edit-profile-form label {
+  font-size: 16px;
+}
+
+.edit-profile-form input,
+.edit-profile-form select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.edit-profile-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.edit-profile-form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-profile-form button[type="reset"] {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ccc;
+}

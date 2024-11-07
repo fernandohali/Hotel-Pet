@@ -15,17 +15,31 @@
         <h1>Hotel Pet</h1>
         <form>
           <label for="login">Login</label>
-          <input type="text" id="login" name="login" required />
+          <input
+            type="text"
+            id="login"
+            name="login"
+            placeholder="Digite seu login"
+            required
+            aria-label="Campo de login"
+          />
 
-          <label for="senha">Senha</label>CadastrarUsuario
-          <input type="password" id="senha" name="senha" required />
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Digite sua senha"
+            required
+            aria-label="Campo de senha"
+          />
 
           <button type="submit">Entrar</button>
         </form>
-        <button onclick="window.location.href='criar-conta.html'">
-          Criar conta
-        </button>
-        <p><a href="login.html">Já tem conta? Login</a></p>
+        <p>
+          <a href="#">Esqueci a senha</a> |
+          <a href="criar-conta.html" class="create-account-link">Criar conta</a>
+        </p>
       </div>
     </div>
   </body>

@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Pet - Editar Pet</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Hotel Pet</h1>
-            <div class="user-info">
-                <span>João da Silva</span>
-            </div>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="pet.html">Pet</a></li>
-                <li><a href="usuarios.html">Usuarios</a></li>
-                <li><a href="configuracoes.html">Configuracoes</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
-            </ul>
-        </nav>
-        <main>
-            <nav class="breadcrumb">
-                <a href="home.html">Home</a> / 
-                <a href="pet.html">Pet</a> / 
-                <span>Editar Pet</span>
-            </nav>
-            <h2>Editar Pet</h2>
-            <form class="edit-pet-form">
-                <label for="nome">Nome *</label>
-                <input type="text" id="nome" name="nome" value="Max" required>
-                
-                <label for="tipo">Tipo *</label>
-                <select id="tipo" name="tipo" required>
-                    <option value="cachorro" selected>Cachorro</option>
-                    <option value="gato">Gato</option>
-                </select>
-                
-                <label for="raca">Raça *</label>
-                <input type="text" id="raca" name="raca" value="Pastor Alemão" required>
-                
-                <label for="tamanho">Tamanho *</label>
-                <select id="tamanho" name="tamanho" required>
-                    <option value="pequeno">Pequeno</option>
-                    <option value="medio">Médio</option>
-                    <option value="grande" selected>Grande</option>
-                </select>
-                
-                <label for="imagem">Imagem</label>
-                <input type="file" id="imagem" name="imagem">
+      <!-- Barra Lateral -->
+      <nav>
+        <ul>
+          <li><a href="pet.html">Pet</a></li>
+          <li><a href="usuarios.html">Usuários</a></li>
+          <li><a href="configuracoes.html">Configurações</a></li>
+          <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
 
-                <button type="submit">Salvar</button>
-                <button type="reset">Limpar</button>
-            </form>
-        </main>
+      <!-- Conteúdo Principal -->
+      <main>
+        <header>
+          <h1>Hotel Pet</h1>
+          <div class="user-info">João da Silva</div>
+        </header>
+
+        <nav class="breadcrumb">
+          <a href="home.html">Home</a> / <a href="pet.html">Pet</a> /
+          <span>Editar Pet</span>
+        </nav>
+
+        <h2>Editar Pet</h2>
+
+        <!-- Formulário de Edição de Pet -->
+        <form class="edit-pet-form">
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" name="nome" value="Max" required />
+
+          <label for="tipo">Tipo *</label>
+          <select id="tipo" name="tipo" required>
+            <option value="cachorro" selected>Cachorro</option>
+            <option value="gato">Gato</option>
+          </select>
+
+          <label for="raca">Raça *</label>
+          <input
+            type="text"
+            id="raca"
+            name="raca"
+            value="Pastor Alemão"
+            required
+          />
+
+          <label for="tamanho">Tamanho *</label>
+          <select id="tamanho" name="tamanho" required>
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande" selected>Grande</option>
+          </select>
+
+          <label for="imagem">Imagem</label>
+          <input type="file" id="imagem" name="imagem" />
+
+          <button type="submit">Salvar</button>
+          <button type="reset">Limpar</button>
+        </form>
+      </main>
     </div>
-</body>
+  </body>
 </html>
