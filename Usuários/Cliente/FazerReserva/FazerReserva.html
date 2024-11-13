@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Pet - Fazer Reserva</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <h1>Hotel Pet</h1>
+        <ul>
+          <li><a href="pets.html">Pets</a></li>
+          <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-content">
+        <nav class="breadcrumb">
+          <a href="home.html">Home</a> / <a href="reservas.html">Reservas</a> /
+          Fazer Reserva
+        </nav>
+
+        <header>
+          <h1>Fazer Reserva</h1>
+        </header>
+
+        <form class="reservation-form">
+          <div class="form-group">
+            <label for="pet">Pet *</label>
+            <input type="text" id="pet" name="pet" value="Max" readonly />
+          </div>
+
+          <div class="form-group">
+            <label for="checkin">Período *</label>
+            <div class="date-range">
+              <input
+                type="date"
+                id="checkin"
+                name="checkin"
+                value="2021-05-02"
+                required
+              />
+              <input
+                type="date"
+                id="checkout"
+                name="checkout"
+                value="2021-05-07"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Notas</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            ></textarea>
+          </div>
+
+          <div class="total">
+            <p><strong>Total das diárias:</strong> R$ 40,00</p>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Salvar</button>
+            <button type="reset">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

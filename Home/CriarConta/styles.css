@@ -1,0 +1,135 @@
+/* Estilos gerais */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+/* Barra lateral */
+.sidebar {
+  width: 220px;
+  background-color: #007bff; /* Azul para a barra lateral */
+  padding-top: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  color: white; /* Texto branco para o título */
+  padding: 0 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 26px;
+  color: #343a40;
+}
+
+/* Formulário de criação de conta */
+.signup-form {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+}
+
+/* Botão de ações */
+.actions {
+  margin-top: 20px;
+}
+
+.actions button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.actions button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.actions button:active {
+  background-color: #004085;
+}
+
+/* Links extras */
+.extra-links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.extra-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+}

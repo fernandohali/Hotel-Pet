@@ -1,151 +1,203 @@
-/* Reset básico */
+/* Estilos gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* Contêiner principal */
+body {
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  display: flex;
+}
+
+/* Container principal */
 .container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  width: 100%;
 }
 
-/* Barra de navegação à esquerda */
+/* Barra lateral */
 nav {
-    width: 200px;
-    background-color: #007bff;
-    padding: 20px;
+  width: 200px;
+  background-color: #007bff;
+  color: #fff;
+  padding-top: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
-nav li {
-    margin-bottom: 15px;
+nav ul li {
+  margin: 15px 0;
+  text-align: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
 }
 
-nav a.active {
-    font-weight: bold;
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #0056b3;
+  border-radius: 5px;
 }
 
 /* Conteúdo principal */
 main {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #f9f9f9;
-    overflow-y: auto;
+  padding: 20px;
+  flex: 1;
+  margin-left: 200px; /* Espaço para a barra lateral fixa */
 }
 
+/* Cabeçalho */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ccc;
 }
 
 header h1 {
-    font-size: 24px;
+  color: #333;
 }
 
 .user-info {
-    font-size: 16px;
+  font-weight: bold;
+  color: #333;
 }
 
 /* Breadcrumb */
 .breadcrumb {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
+  margin: 20px 0;
+  color: #555;
+  font-size: 0.9em;
 }
 
-/* Formulário */
+/* Título da seção */
 h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.reservation-form div {
-    margin-bottom: 15px;
+/* Formulário de Edição de Reserva */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
+.reservation-form label {
+  font-weight: bold;
+  color: #555;
 }
 
-input, textarea, select {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.reservation-form input[type="text"],
+.reservation-form input[type="date"],
+.reservation-form select,
+.reservation-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  transition: border-color 0.3s ease;
 }
 
-textarea {
-    resize: vertical;
+.reservation-form input[type="text"]:focus,
+.reservation-form input[type="date"]:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+  border-color: #007bff;
 }
 
+/* Imagem do pet */
 .image-upload {
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .image-placeholder {
-    width: 100px;
-    height: 100px;
-    background-color: #ddd;
-    display: inline-block;
-    text-align: center;
-    line-height: 100px;
-    margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 0.9em;
+  color: #555;
 }
 
 .add-image {
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  font-size: 1.5em;
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-/* Total e botões */
+.add-image:hover {
+  color: #0056b3;
+}
+
+/* Total das diárias */
 .total {
-    font-size: 16px;
-    margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #333;
 }
 
+/* Botões de ação */
 .buttons {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.save-button, .clear-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.save-button,
+.clear-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  font-weight: bold;
 }
 
 .save-button {
-    background-color: #007bff;
-    color: white;
+  background-color: #007bff;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
 }
 
 .clear-button {
-    background-color: #f8f9fa;
-    color: #333;
-    border: 1px solid #ccc;
+  background-color: #f44336;
+}
+
+.clear-button:hover {
+  background-color: #d32f2f;
 }

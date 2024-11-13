@@ -1,0 +1,148 @@
+/* Estilos gerais */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+  }
+  
+  /* Barra lateral */
+  .sidebar {
+    width: 220px;
+    background-color: #007bff; /* Azul para a barra lateral */
+    border-right: 1px solid #0056b3; /* Cor mais escura para o borde */
+    padding-top: 20px;
+    flex-shrink: 0;
+  }
+  
+  .sidebar h1 {
+    font-size: 24px;
+    color: white; /* Texto branco para o título */
+    padding: 0 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar a {
+    color: white; /* Links brancos */
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .sidebar a.active,
+  .sidebar a:hover {
+    background-color: #0056b3; /* Destaque em azul escuro */
+    color: white;
+  }
+  
+  /* Conteúdo Principal */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  header h1 {
+    font-size: 26px;
+    margin: 0;
+    color: #343a40;
+  }
+  
+  /* Breadcrumb */
+  .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #6c757d;
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Formulário para Novo Pet */
+  .reservation-form {
+    margin-top: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  input[type="text"],
+  input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .actions button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .actions button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .actions button:active {
+    background-color: #004085;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .main-content {
+      padding: 15px;
+    }
+  }
+  

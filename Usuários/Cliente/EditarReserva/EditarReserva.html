@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Pet - Editar Reserva</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Barra de Navegação Lateral -->
+      <nav class="sidebar">
+        <h1>Hotel Pet</h1>
+        <ul>
+          <li><a href="pet.html">Pet</a></li>
+          <li><a href="usuarios.html">Usuários</a></li>
+          <li><a href="configuracoes.html">Configurações</a></li>
+          <li><a href="reservas.html" class="active">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Conteúdo Principal -->
+      <div class="main-content">
+        <header>
+          <div class="user-info">
+            <img
+              src="path/to/foto-usuario.jpg"
+              alt="Foto de João"
+              class="user-photo"
+            />
+            <span>João da Silva</span>
+          </div>
+          <hr class="separator" />
+        </header>
+
+        <main>
+          <nav class="breadcrumb">
+            <a href="home.html">Home</a> /
+            <a href="reservas.html">Reservas</a> / <span>Editar Reserva</span>
+          </nav>
+          <h2>Editar Reserva</h2>
+
+          <!-- Formulário de edição -->
+          <form class="edit-reservation-form">
+            <div class="field-group">
+              <label for="proprietario">Proprietário *</label>
+              <input
+                type="text"
+                id="proprietario"
+                name="proprietario"
+                value="José da Silva"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="pet">Pet *</label>
+              <input type="text" id="pet" name="pet" value="Max" required />
+            </div>
+
+            <div class="field-group">
+              <label for="periodo-inicio">Período *</label>
+              <input
+                type="date"
+                id="periodo-inicio"
+                name="periodo-inicio"
+                value="2021-05-02"
+                required
+              />
+              <input
+                type="date"
+                id="periodo-fim"
+                name="periodo-fim"
+                value="2021-05-07"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="notas">Notas</label>
+              <textarea id="notas" name="notas" rows="4">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea
+              >
+            </div>
+
+            <div class="total">
+              <label>Total das diárias:</label>
+              <span>R$ 40,00</span>
+            </div>
+
+            <div class="buttons">
+              <button type="submit">Salvar</button>
+              <button type="reset">Limpar</button>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

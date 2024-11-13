@@ -25,53 +25,53 @@
           <div class="user-info">João da Silva</div>
         </header>
 
+        <div class="breadcrumb">Home / reservas / editar reserva</div>
         <h2>Editar Reserva</h2>
 
         <!-- Formulário de Edição de Reserva -->
-        <form class="edit-reservation-form">
-          <label for="proprietario">Proprietário *</label>
-          <input
-            type="text"
-            id="proprietario"
-            name="proprietario"
-            value="José da Silva"
-            readonly
-          />
-
-          <label for="pet">Pet *</label>
-          <input type="text" id="pet" name="pet" value="Max" readonly />
-
-          <label for="inicio">Início *</label>
-          <input
-            type="date"
-            id="inicio"
-            name="inicio"
-            value="2021-05-02"
-            required
-          />
-
-          <label for="fim">Fim *</label>
-          <input type="date" id="fim" name="fim" value="2021-05-07" required />
-
-          <label for="notas">Notas</label>
-          <textarea id="notas" name="notas">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea
-          >
-
-          <label for="status">Status *</label>
-          <select id="status" name="status" required>
-            <option value="reservado">Reservado</option>
-            <option value="em_andamento" selected>Em andamento</option>
-            <option value="cancelado">Cancelado</option>
-            <option value="finalizado">Finalizado</option>
-          </select>
-
-          <div class="total">
-            <p>Total das diárias: R$ 40,00</p>
+        <form class="reservation-form">
+          <div>
+            <label for="proprietario">Proprietário *</label>
+            <input
+              type="text"
+              id="proprietario"
+              value="José da Silva"
+              readonly
+            />
           </div>
-
-          <button type="submit">Salvar</button>
-          <button type="reset">Limpar</button>
+          <div>
+            <label for="pet">Pet *</label>
+            <input type="text" id="pet" value="Max" readonly />
+          </div>
+          <div>
+            <label for="inicio">Início *</label>
+            <input type="date" id="inicio" value="2021-05-02" required />
+          </div>
+          <div>
+            <label for="fim">Fim *</label>
+            <input type="date" id="fim" value="2021-05-07" required />
+          </div>
+          <div>
+            <label for="notas">Notas</label>
+            <textarea id="notas" rows="3">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea
+            >
+          </div>
+          <div>
+            <label for="status">Status *</label>
+            <select id="status" required>
+              <option>Em andamento</option>
+              <option>Concluído</option>
+              <option>Cancelado</option>
+            </select>
+          </div>
+          <div class="total">
+            <p>Total das diárias: <strong>R$ 40,00</strong></p>
+          </div>
+          <div class="buttons">
+            <button type="submit" class="save-button">Salvar</button>
+            <button type="reset" class="clear-button">Limpar</button>
+          </div>
         </form>
       </main>
     </div>

@@ -79,62 +79,36 @@ header h1 {
   text-decoration: underline;
 }
 
-/* Detalhes do Pet */
-.pet-details {
-  background-color: #fafafa;
-  padding: 20px;
-  border-radius: 8px;
+/* Formulário de edição de perfil */
+.reservation-form {
   margin-top: 30px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.pet-details h2 {
-  font-size: 22px;
-  color: #007bff;
-  margin-bottom: 15px;
+.form-group {
+  margin-bottom: 20px;
 }
 
-.pet-details p {
+label {
   font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 12px;
+  font-weight: bold;
+  color: #343a40;
 }
 
-.pet-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Reservas */
-.reservations {
-  background-color: #ffffff;
-  margin-top: 30px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.reservations h3 {
-  margin-top: 0;
-  font-size: 20px;
-  color: #007bff;
-}
-
-.reservations ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.reservations li {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
   font-size: 16px;
-  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
 }
 
-/* Ações */
+textarea {
+  resize: vertical;
+}
+
 .actions {
   display: flex;
   gap: 15px;

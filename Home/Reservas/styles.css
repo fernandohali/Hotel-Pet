@@ -1,170 +1,132 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Contêiner principal */
 .container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
-
-/* Barra de navegação à esquerda */
-nav {
-    width: 200px;
-    background-color: #007bff;
-    padding: 20px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
-    margin-bottom: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    display: block;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-nav a:hover {
-    background-color: #0056b3;
-}
-
-nav a.active {
-    font-weight: bold;
-    background-color: #0056b3;
-}
-
 /* Conteúdo principal */
 main {
-    flex-grow: 1;
-    padding: 20px;
-    margin-left: 220px;
-    background-color: #f9f9f9;
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .user-info {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 /* Formulário de pesquisa */
 .search-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 900px;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 900px;
+  margin-top: 20px;
 }
 
 .search-form div {
-    flex: 1 1 200px;
+  flex: 1 1 200px;
 }
 
-.search-form input, .search-form select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+.search-form input,
+.search-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 .form-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .form-buttons button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .form-buttons button:first-child {
-    background-color: #007bff;
-    color: white;
+  background-color: #007bff;
+  color: white;
 }
 
 .form-buttons button:nth-child(2) {
-    background-color: #f8f9fa;
-    color: #333;
-    border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ccc;
 }
 
 /* Estilo da tabela de reservas */
 .reservations-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
 }
 
-.reservations-table th, .reservations-table td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ccc;
+.reservations-table th,
+.reservations-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
 }
 
 .reservations-table th {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .status {
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 .status.reserved {
-    background-color: #ffc107;
-    color: white;
+  background-color: #ffc107;
+  color: white;
 }
 
 .status.in-progress {
-    background-color: #17a2b8;
-    color: white;
+  background-color: #17a2b8;
+  color: white;
 }
 
 .status.finished {
-    background-color: #28a745;
-    color: white;
+  background-color: #28a745;
+  color: white;
 }
 
 /* Botões de ação na tabela */
 .reservations-table a {
-    text-decoration: none;
-    color: #007bff;
+  text-decoration: none;
+  color: #007bff;
 }
 
 .reservations-table a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

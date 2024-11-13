@@ -1,0 +1,66 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Barra lateral */
+.sidebar {
+  width: 220px;
+  background-color: #007bff;
+  padding-top: 20px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin: 0 20px;
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #0056b3;
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+header h1 {
+  font-size: 26px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}

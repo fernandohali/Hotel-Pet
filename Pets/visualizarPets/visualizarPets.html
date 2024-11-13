@@ -8,30 +8,35 @@
   </head>
   <body>
     <div class="container">
-      <nav>
+      <nav class="sidebar">
+        <h1>Hotel Pet</h1>
         <ul>
-          <li><a href="pets.html" class="active">Pets</a></li>
+          <li><a href="pets.html">Pets</a></li>
           <li><a href="reservas.html">Reservas</a></li>
         </ul>
       </nav>
-      <main>
+
+      <div class="main-content">
+        <nav class="breadcrumb">
+          <a href="home.html">Home</a> / <a href="pets.html">Pets</a> / Ver Pet
+        </nav>
+
         <header>
-          <h1>Hotel Pet</h1>
-          <div class="user-info">
-            <span>João da Silva</span>
-          </div>
+          <h1>Ver Pet</h1>
         </header>
-        <h2>Ver Pet</h2>
+        <div class="actions">
+          <button>Editar</button>
+          <button>Deletar</button>
+        </div>
         <div class="pet-details">
           <p><strong>Proprietário:</strong> José da Silva</p>
           <p><strong>ID:</strong> 1234509876</p>
           <p><strong>Nome:</strong> Max</p>
           <p><strong>Tipo:</strong> Cachorro</p>
           <p><strong>Raça:</strong> Pastor Alemão</p>
-          <div class="pet-image">
-            <!-- Placeholder for pet image -->
-          </div>
+          <div class="pet-image"></div>
         </div>
+
         <div class="reservations">
           <h3>Reservas</h3>
           <ul>
@@ -39,12 +44,11 @@
             <li>02/05/2021 - 07/05/2021 (em andamento)</li>
           </ul>
         </div>
+
         <div class="actions">
-          <button>Editar</button>
-          <button>Deletar</button>
           <button onclick="history.back()">Voltar</button>
         </div>
-      </main>
+      </div>
     </div>
   </body>
 </html>
