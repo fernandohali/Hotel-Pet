@@ -41,7 +41,7 @@ body {
   font-size: 16px;
   display: block;
   padding: 10px 20px;
-  transition: background 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
 }
 
 .sidebar a.active,
@@ -57,10 +57,14 @@ body {
   background-color: #ffffff;
 }
 
-header h1 {
-  font-size: 26px;
-  margin: 0;
-  color: #343a40;
+/* Header */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Breadcrumb */
@@ -135,11 +139,39 @@ textarea {
 
 .actions button:hover {
   background-color: #0056b3;
-  transform: scale(1.05);
+  transform: scale(1.05); /* Suavização do efeito de escala */
 }
 
 .actions button:active {
   background-color: #004085;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #f1f1f1;
+}
+
+table td a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+table td a:hover {
+  color: #0056b3; /* Melhor destaque no hover */
 }
 
 /* Responsividade */
@@ -151,9 +183,15 @@ textarea {
   .sidebar {
     width: 100%;
     padding: 10px;
+    margin-bottom: 15px; /* Espaço para separar a barra lateral do conteúdo */
   }
 
   .main-content {
     padding: 15px;
+  }
+
+  /* Ajustar os botões no layout móvel */
+  .actions button {
+    padding: 10px 20px; /* Menos padding em telas menores */
   }
 }

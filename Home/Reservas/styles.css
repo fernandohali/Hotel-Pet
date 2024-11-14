@@ -10,6 +10,7 @@
   display: flex;
   height: 100vh;
 }
+
 /* Conteúdo principal */
 main {
   flex-grow: 1;
@@ -64,22 +65,32 @@ header h1 {
 }
 
 .form-buttons button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 16px; /* Diminuir o tamanho do botão */
+  font-size: 14px;    /* Diminuir o tamanho da fonte */
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Transição suave */
 }
 
 .form-buttons button:first-child {
-  background-color: #007bff;
+  background-color: #0056b3; /* Tom mais suave de azul */
   color: white;
+}
+
+.form-buttons button:first-child:hover {
+  background-color: #004085; /* Efeito hover mais escuro */
+  transform: scale(1.05);    /* Efeito de crescimento ao passar o mouse */
 }
 
 .form-buttons button:nth-child(2) {
   background-color: #f8f9fa;
   color: #333;
   border: 1px solid #ccc;
+}
+
+.form-buttons button:nth-child(2):hover {
+  background-color: #e2e6ea;
 }
 
 /* Estilo da tabela de reservas */

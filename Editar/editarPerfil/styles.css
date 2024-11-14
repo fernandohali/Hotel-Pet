@@ -11,49 +11,10 @@
   height: 100vh;
 }
 
-/* Barra de navegação à esquerda */
-nav {
-  width: 200px;
-  background-color: #007bff;
-  padding: 20px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav li {
-  margin-bottom: 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  display: block;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-nav a:hover {
-  background-color: #0056b3;
-}
-
-nav a.active {
-  font-weight: bold;
-  background-color: #0056b3;
-}
-
 /* Conteúdo principal */
 main {
   flex-grow: 1;
-  padding: 20px;
-  margin-left: 220px;
+  padding-left: 20px;
   background-color: #f9f9f9;
 }
 

@@ -6,12 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const pagePaths = {
     Home: { html: "../Home/Home.html", css: "styles.css" },
     Pets: { html: "../Pets/pets.html", css: "../Pets/styles.css" },
-    Reservas: { html: "../Home/Reservas/reservas.html", css: "../Home/Reservas/styles.css" },
+    Reservas: {
+      html: "../Home/Reservas/reservas.html",
+      css: "../Home/Reservas/styles.css",
+    },
     NovaReserva: { html: "Reservas/nova-reserva.html", css: "styles.css" },
     VerReserva: { html: "Reservas/ver-reserva.html", css: "styles.css" },
     EditarPet: { html: "Pets/editar-pet.html", css: "style-pet.css" },
     NovoPet: { html: "Pets/novo-pet.html", css: "style-pet.css" },
-    EditarPerfil: { html: "Perfil/editar-perfil.html", css: "styles.css" },
+    editarPerfil: {
+      html: "../Editar/editarPerfil/editarPerfil.html",
+      css: "../Editar/editarPerfil/styles.css",
+    },
+    CadastrarPet: {
+      html: "../Cadastro/CadastrarPet/CadastrarPet.html",
+      css: "../Cadastro/CadastrarPet/styles.css",
+    },
+    CadastrarUsuario: {
+      html: "../Cadastro/CadastrarUsuario/CadastrarUsuario.html",
+      css: "../Cadastro/CadastrarUsuario/styles.css",
+    },
   };
 
   // Função para carregar CSS dinamicamente com timestamp para evitar cache
