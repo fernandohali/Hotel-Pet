@@ -27,11 +27,11 @@ function validarLogin(event) {
 
     // Redireciona para a página principal dependendo do tipo de usuário
     if (usuarioAutenticado.role === "cliente") {
-      window.location.href = "../Nav/index.html"; // Página do Cliente
+      window.location.href = "../Nav/NavCliente/index.html"; // Página do Cliente
     } else if (usuarioAutenticado.role === "funcionario") {
-      window.location.href = "../Nav/index.html"; // Página do Funcionário
+      window.location.href = "../Nav/NavFuncionario/index.html"; // Página do Funcionário
     } else if (usuarioAutenticado.role === "gerente") {
-      window.location.href = "../Nav/index.html"; // Página do Gerente
+      window.location.href = "../Nav/NavGerente/index.html"; // Página do Gerente
     }
   }
 }
