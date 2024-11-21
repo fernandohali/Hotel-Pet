@@ -5,35 +5,58 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mapeamento de páginas para caminhos de arquivos HTML e CSS
   const pagePaths = {
     Home: { html: "../../Home/Home.html", css: "../../Home/styles.css" },
-    Pets: { html: "../../Pets/pets.html", css: "../../Pets/styles.css" },
-    Reservas: {
-      html: "../../Reservas/reservas.html",
-      css: "../../Reservas/styles.css",
-    },
-    NovaReserva: {
-      html: "../../Reservas/novaReserva.html",
-      css: "../../Reservas/styles.css",
+    FazerReserva: {
+      html: "../../Reserva/FazerReserva/FazerReserva.html",
+      css: "../../Reserva/FazerReserva/styles.css",
     },
     VerReserva: {
-      html: "../../Reservas/verReserva.html",
-      css: "../../Reservas/styles.css",
+      html: "../../Reserva/VerReserva/VerReserva.html",
+      css: "../../Reserva/VerReserva/styles.css",
+    },
+    Reservas: { html: "Reservas/reservas.html", css: "Reservas/styles.css" },
+    CadastrarPets: {
+      html: "../../Pets/CadastrarPets/CadastrarPets.html",
+      css: "../../Pets/CadastrarPets/styles.css",
     },
     EditarPet: {
-      html: "../../Pets/editarPet.html",
-      css: "../../Pets/styles.css",
+      html: "../../Pets/EditarPet/EditarPet.html",
+      css: "../../Pets/EditarPet/styles.css",
     },
-    NovoPet: { html: "../../Pets/novoPet.html", css: "../../Pets/styles.css" },
+    VisualizarPet: {
+      html: "../../Pets/VisualizarPet/VisualizarPet.html",
+      css: "../../Pets/VisualizarPet/styles.css",
+    },
     EditarPerfil: {
-      html: "../../Perfil/editarPerfil.html",
+      html: "../../Home/EditarPerfil/editarPerfil.html",
+      css: "../../Home/EditarPerfil/styles.css",
+    },
+    CadastrarPerfil: {
+      html: "../../Perfil/cadastrarPerfil.html",
       css: "../../Perfil/styles.css",
     },
     Usuarios: {
-      html: "../../Usuarios/usuarios.html",
-      css: "../../Usuarios/styles.css",
+      html: "../../Home/Usuários/Usuários.html",
+      css: "../../Home/Usuários/styles.css",
     },
-    Configuracoes: {
-      html: "../../Configuracoes/configuracoes.html",
-      css: "../../Configuracoes/styles.css",
+    CadastrarUsuarios: {
+      html: "../../Cadastro/CadastrarUsuario/CadastrarUsuario.html",
+      css: "../../Cadastro/CadastrarUsuario/styles.css",
+    },
+    EditarReserva: {
+      html: "../../Editar/editarReserva/editarReserva.html",
+      css: "../../Editar/editarReserva/styles.css",
+    },
+    EditarReservaEmAndamento: {
+      html: "../../Editar/editarReservaEmAndamento/editarReservaEmAndamento.html",
+      css: "../../Editar/editarReservaEmAndamento/styles.css",
+    },
+    EditarReservaFinalizada: {
+      html: "../../Editar/editarReservaFinalizada/editarReservaFinalizada.html",
+      css: "../../Editar/editarReservaFinalizada/styles.css",
+    },
+    Configurar: {
+      html: "../../Home/Configurar/configuracoes.html",
+      css: "../../Home/Configurar/styles.css",
     },
   };
 

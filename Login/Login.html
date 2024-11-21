@@ -8,10 +8,16 @@
     <script src="Login.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <div class="image-placeholder">
-        <!-- Placeholder para a imagem -->
+    <div class="carousel-background">
+      <div class="carousel-container">
+        <div class="carousel-slide"></div>
+        <div class="carousel-slide"></div>
+        <div class="carousel-slide"></div>
+        <div class="carousel-slide"></div>
+        <div class="carousel-slide"></div>
       </div>
+    </div>
+    <div class="container">
       <div class="login-form">
         <h1>Hotel Pet</h1>
         <form onsubmit="validarLogin(event)">
@@ -24,7 +30,6 @@
             required
             aria-label="Campo de login"
           />
-
           <label for="senha">Senha</label>
           <input
             type="password"
@@ -34,16 +39,11 @@
             required
             aria-label="Campo de senha"
           />
-
           <button type="submit">Entrar</button>
         </form>
         <p>
           <a href="#">Esqueci a senha</a> |
-          <a
-            href="../Home/CriarConta/CriarConta.html"
-            class="create-account-link"
-            >Criar conta</a
-          >
+          <a href="../Home/CriarConta/CriarConta.html" class="create-account-link">Criar conta</a>
         </p>
       </div>
     </div>

@@ -1,5 +1,3 @@
-/* styles.css */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,49 +6,73 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+.carousel-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.carousel-container {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out; /* Suaviza a transição */
+}
+
+.carousel-slide {
+  min-width: 100%; /* Cada slide ocupa 100% da largura */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-slide:nth-child(1) {
+  background-image: url('hotel-pra-cachorro-1024x768.jpg');
+}
+
+.carousel-slide:nth-child(2) {
+  background-image: url('hotel-para-caes.jpg');
+}
+
+.carousel-slide:nth-child(3) {
+  background-image: url('hotel-para-cachorro.jpg');
+}
+
+.carousel-slide:nth-child(4) {
+  background-image: url('hospedagem-para-caes.jpg');
+}
+
+.carousel-slide:nth-child(5) {
+  background-image: url('hospedagem-cachorro-preco.jpg');
 }
 
 .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 350px;
   width: 90%;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 20px;
 }
 
-/* .image-placeholder {
-  width: 100%;
-  height: 150px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
-  color: #888888;
-}
- */
 .login-form h1 {
-  width: 100%;
-  height: 150px;
-  margin-top: 20px;
   color: #074ee8;
   font-size: 1.8em;
   margin-bottom: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 form {
@@ -80,8 +102,6 @@ button {
   color: #ffffff;
   background-color: #074ee8;
   border: none;
-  height: 40px;
-  width: 287px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -90,14 +110,6 @@ button {
 
 button:hover {
   background-color: #23ff06;
-}
-
-button + button {
-  background-color: #2196f3;
-}
-
-button + button:hover {
-  background-color: #1e88e5;
 }
 
 p {

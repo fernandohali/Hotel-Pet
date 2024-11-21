@@ -1,29 +1,36 @@
 /* Estilos gerais */
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f7f8fa; /* Cor de fundo mais suave */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
   display: flex;
   min-height: 100vh;
   flex-wrap: wrap;
+  background-color: #fff; /* Cor de fundo para a área principal */
 }
 
 /* Barra lateral */
 .sidebar {
   width: 220px;
-  background-color: #007bff; /* Azul para a barra lateral */
-  border-right: 1px solid #0056b3; /* Cor mais escura para o borde */
+  background-color: #0056b3; /* Azul escuro para contraste */
+  border-right: 2px solid #003366; /* Cor mais escura para a borda */
   padding-top: 20px;
-  flex-shrink: 0;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
 .sidebar h1 {
   font-size: 24px;
-  color: white; /* Texto branco para o título */
+  color: white;
   padding: 0 20px;
   margin-bottom: 30px;
   font-weight: bold;
@@ -36,35 +43,50 @@ body {
 }
 
 .sidebar a {
-  color: white; /* Links brancos */
+  color: white;
   text-decoration: none;
   font-size: 16px;
   display: block;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+  padding: 12px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 6px;
 }
 
 .sidebar a.active,
 .sidebar a:hover {
-  background-color: #0056b3; /* Destaque em azul escuro */
-  color: white;
+  background-color: #003366;
+  transform: translateX(5px);
 }
 
 /* Conteúdo Principal */
 .main-content {
   flex: 1;
   padding: 20px;
-  background-color: #ffffff;
+  margin-left: 240px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: margin-left 0.3s ease;
 }
 
-/* Header */
 header {
   background-color: #007bff;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 20px;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra no cabeçalho */
+}
+
+header h1 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.user-info {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* Breadcrumb */
@@ -84,49 +106,32 @@ header {
 }
 
 /* Formulário */
-.reservation-form {
+.search-form {
   margin-top: 30px;
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
+.search-form label {
   font-size: 16px;
   font-weight: bold;
   color: #343a40;
 }
 
 input[type="text"],
-input[type="file"],
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid #ccc;
   margin-top: 8px;
+  background-color: #fff;
 }
 
 textarea {
   resize: vertical;
 }
 
-.total {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Botões de Ação */
-.actions {
-  display: flex;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.actions button {
+button {
   padding: 12px 24px;
   font-size: 16px;
   background-color: #007bff;
@@ -134,16 +139,17 @@ textarea {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  margin-top: 20px;
 }
 
-.actions button:hover {
+button:hover {
   background-color: #0056b3;
-  transform: scale(1.05); /* Suavização do efeito de escala */
+  transform: scale(1.05);
 }
 
-.actions button:active {
-  background-color: #004085;
+button:active {
+  background-color: #003366;
 }
 
 /* Tabela */
@@ -151,17 +157,19 @@ table {
   width: 100%;
   margin-top: 20px;
   border-collapse: collapse;
+  background-color: #ffffff;
 }
 
 table th,
 table td {
-  padding: 12px;
+  padding: 14px;
   text-align: left;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
 }
 
 table th {
   background-color: #f1f1f1;
+  font-weight: bold;
 }
 
 table td a {
@@ -171,7 +179,7 @@ table td a {
 }
 
 table td a:hover {
-  color: #0056b3; /* Melhor destaque no hover */
+  color: #0056b3;
 }
 
 /* Responsividade */
@@ -182,16 +190,23 @@ table td a:hover {
 
   .sidebar {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px; /* Espaço para separar a barra lateral do conteúdo */
+    position: relative;
+    height: auto;
+    margin-bottom: 15px;
   }
 
   .main-content {
+    margin-left: 0;
     padding: 15px;
+    box-shadow: none;
   }
 
-  /* Ajustar os botões no layout móvel */
-  .actions button {
-    padding: 10px 20px; /* Menos padding em telas menores */
+  header h1 {
+    font-size: 22px;
+  }
+
+  .sidebar ul li a {
+    font-size: 14px;
+    padding: 10px 15px;
   }
 }
