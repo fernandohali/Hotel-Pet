@@ -84,9 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((html) => {
         contentDiv.innerHTML = html;
         loadCSS(cssPath);
-        if (page === "Configuracoes") initializeConfiguracoesPage();
-        if (page === "Usuarios") initializeUsuariosPage();
-        if (page === "VerReserva") initializeReservaView(true);
+        if (page === "VerReserva") initializeReservaView(true); // Chama a função para inicializar a página VerReserva
       })
       .catch((error) => {
         contentDiv.innerHTML = "<p>Erro ao carregar a página.</p>";
@@ -115,45 +113,21 @@ document.addEventListener("DOMContentLoaded", () => {
     loadPage(page);
   });
 
-  // Função para inicializar configurações (exclusivo para gerente)
-  function initializeConfiguracoesPage() {
-    const diariaInput = document.querySelector("#valorDiaria");
-    const vagasInput = document.querySelector("#numeroVagas");
-    const configForm = document.querySelector("#configForm");
-
-    configForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const diaria = diariaInput.value;
-      const vagas = vagasInput.value;
-      if (diaria && vagas) {
-        alert(
-          `Configurações atualizadas! Diária: R$${diaria}, Vagas: ${vagas}`
-        );
-        // Código para salvar configurações no banco
-      } else {
-        alert("Por favor, preencha todos os campos.");
-      }
-    });
-  }
-
-  // Função para inicializar a tela de usuários com edição de papéis
-  function initializeUsuariosPage() {
-    const userRoleSelects = document.querySelectorAll(".user-role-select");
-    userRoleSelects.forEach((select) => {
-      select.addEventListener("change", (event) => {
-        const userId = event.target.getAttribute("data-user-id");
-        const newRole = event.target.value;
-        alert(`Função do usuário ${userId} alterada para ${newRole}`);
-        // Código para atualizar função do usuário no banco
-      });
-    });
-  }
-
-  // Função para visualizar e editar reserva, incluindo status finalizado para gerentes
+  // Função para inicializar a tela de VerReserva
   function initializeReservaView(isGerente) {
+    console.log("initializeReservaView chamada com isGerente:", isGerente);
+
     const reservaStatus = document.querySelector("#reservaStatus");
     const notaInput = document.querySelector("#notaEstadia");
     const anotacoesInput = document.querySelector("#anotacoesEstadia");
+
+    // Verifique se os campos existem
+    if (!reservaStatus || !notaInput || !anotacoesInput) {
+      console.error("Elementos necessários não encontrados na página VerReserva.");
+      return;
+    }
+
+    console.log("reservaStatus:", reservaStatus, "notaInput:", notaInput, "anotacoesInput:", anotacoesInput);
 
     if (isGerente && reservaStatus.value === "Finalizada") {
       notaInput.disabled = false;
