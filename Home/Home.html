@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hotel Pet - O melhor serviço para cuidar do seu pet com amor e dedicação."
+    />
     <title>Hotel Pet - Página Principal</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
@@ -19,9 +23,24 @@
           conheça nossos serviços.
         </p>
         <div class="cta-container">
-          <button class="/Reserva/novaReserva/novaReserva.html">Fazer Reserva</button>
+          <!-- Botão com evento de navegação via JavaScript -->
+          <button
+            class="cta-button"
+            aria-label="Ir para a página de Reserva"
+            onclick="navigateToReserva()"
+          >
+            Fazer Reserva
+          </button>
         </div>
       </main>
     </div>
+
+    <script>
+      function navigateToReserva() {
+        loadPage("/Reserva/reservas.html"); // Passa o nome da página para a função loadPage
+      }
+
+      // Função loadPage que já está configurada corretamente
+    </script>
   </body>
 </html>

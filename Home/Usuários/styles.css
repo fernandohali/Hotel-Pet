@@ -12,6 +12,7 @@
   min-height: 100vh;
   flex-direction: column;
   background-color: #f5f5f5;
+  margin-left: 45px;
 }
 
 /* Estilo do cabeçalho */
@@ -33,49 +34,11 @@ header h1 {
   font-weight: 600;
 }
 
-/* Barra lateral (opcional, se você precisar dela) */
-.sidebar {
-  width: 250px;
-  background-color: #333;
-  padding-top: 20px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.sidebar ul {
-  list-style-type: none;
-}
-
-.sidebar li {
-  padding: 10px 20px;
-}
-
-.sidebar li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-.sidebar li a:hover {
-  background-color: #444;
-}
-
 /* Conteúdo principal */
 main {
   flex-grow: 1;
   margin-left: 100px; /* Espaço para a barra lateral */
   padding: 20px;
-}
-
-header h1 {
-  font-size: 28px;
-}
-
-.user-info {
-  font-size: 16px;
-  font-weight: 600;
 }
 
 /* Ações do usuário */
@@ -146,7 +109,35 @@ header h1 {
   background-color: #0056b3;
 }
 
-/* Estilo da tabela de usuários */
+/* Formulário de filtro */
+.filter-form input,
+.filter-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.clear-button {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Tabela de usuários */
 .user-table {
   width: 100%;
   border-collapse: collapse;

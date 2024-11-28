@@ -218,6 +218,34 @@ h2 {
   background-color: #d32f2f;
 }
 
+/* Estilo para os campos de data lado a lado */
+.date-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.date-fields input[type="date"] {
+  flex: 1;
+}
+
+/* Estilo para o botão "Voltar" */
+.back-button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #6c757d;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .container {

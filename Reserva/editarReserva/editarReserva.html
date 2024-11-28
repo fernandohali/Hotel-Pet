@@ -22,8 +22,10 @@
           </div>
           <div>
             <label for="periodo">Período *</label>
-            <input type="date" id="inicio" value="2021-05-02" />
-            <input type="date" id="fim" value="2021-05-07" />
+            <div class="date-fields">
+              <input type="date" id="inicio" value="2021-05-02" />
+              <input type="date" id="fim" value="2021-05-07" />
+            </div>
           </div>
           <div>
             <label for="notas">Notas</label>
@@ -56,6 +58,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea
           <div class="buttons">
             <button type="submit" class="save-button">Salvar</button>
             <button type="reset" class="clear-button">Limpar</button>
+            <button onclick="history.back()">Voltar</button>
           </div>
         </form>
       </main>

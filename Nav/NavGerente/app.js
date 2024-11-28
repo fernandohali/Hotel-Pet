@@ -9,10 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
       html: "../../Reserva/FazerReserva/FazerReserva.html",
       css: "../../Reserva/FazerReserva/styles.css",
     },
-    VerReserva: {
-      html: "../../Reserva/VerReserva/VerReserva.html",
-      css: "../../Reserva/VerReserva/styles.css",
-    },
     Reserva: {
       html: "../../Reserva/reservas.html",
       css: "../../Reserva/styles.css",
@@ -36,10 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     EditarPerfil: {
       html: "../../Home/Usuários/EditarPerfil/EditarPerfil.html",
       css: "../../Home/Usuários/EditarPerfil/styles.css",
-    },
-    CadastrarPerfil: {
-      html: "../../Perfil/cadastrarPerfil.html",
-      css: "../../Perfil/styles.css",
     },
     Usuarios: {
       html: "../../Home/Usuários/Usuários.html",
@@ -67,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  // Função para carregar CSS dinamicamente com timestamp para evitar cache
+  // Função para carregar CSS dinamicamente
   function loadCSS(cssPath) {
     let existingLink = document.querySelector("link[data-dynamic-css]");
     if (existingLink) existingLink.remove();
@@ -91,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((html) => {
         contentDiv.innerHTML = html;
         loadCSS(cssPath);
-        if (page === "VerReserva") initializeReservaView(true); // Chama a função para inicializar a página VerReserva
       })
       .catch((error) => {
         contentDiv.innerHTML = "<p>Erro ao carregar a página.</p>";
@@ -119,50 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const page = event.state ? event.state.page : "Home";
     loadPage(page);
   });
-
-  // Função para inicializar a tela de VerReserva
-  function initializeReservaView(isGerente) {
-    console.log("initializeReservaView chamada com isGerente:", isGerente);
-
-    const reservaStatus = document.querySelector("#reservaStatus");
-    const notaInput = document.querySelector("#notaEstadia");
-    const anotacoesInput = document.querySelector("#anotacoesEstadia");
-
-    // Verifique se os campos existem
-    if (!reservaStatus || !notaInput || !anotacoesInput) {
-      console.error(
-        "Elementos necessários não encontrados na página VerReserva."
-      );
-      return;
-    }
-
-    console.log(
-      "reservaStatus:",
-      reservaStatus,
-      "notaInput:",
-      notaInput,
-      "anotacoesInput:",
-      anotacoesInput
-    );
-
-    if (isGerente && reservaStatus.value === "Finalizada") {
-      notaInput.disabled = false;
-      anotacoesInput.disabled = false;
-    } else if (reservaStatus.value === "Finalizada") {
-      notaInput.disabled = true;
-      anotacoesInput.disabled = true;
-    }
-
-    reservaStatus.addEventListener("change", () => {
-      if (reservaStatus.value === "Finalizada") {
-        notaInput.disabled = false;
-        anotacoesInput.disabled = false;
-      } else {
-        notaInput.disabled = true;
-        anotacoesInput.disabled = true;
-      }
-    });
-  }
 
   // Carrega a página inicial
   const initialPage = location.hash.replace("#", "") || "Home";

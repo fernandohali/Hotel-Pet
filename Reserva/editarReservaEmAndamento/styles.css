@@ -78,6 +78,23 @@ header h1 {
   color: #555;
   font-size: 0.9em;
 }
+/* Estilo para o botão Voltar */
+.back-button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #6c757d;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
 
 h2 {
   margin-bottom: 20px;
