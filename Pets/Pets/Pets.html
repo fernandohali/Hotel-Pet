@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet - Pets</title>
+  <link rel="stylesheet" href="../../css/global.css">
+</head>
+<body>
+  <div class="container">
+    <main>
+      <h2>Pets</h2>
+      <form class="search-form">
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome">
+        <label for="raca">Raça</label>
+        <input type="text" id="raca" name="raca">
+        <label for="tamanho">Tamanho</label>
+        <input type="text" id="tamanho" name="tamanho">
+        <button type="submit">Pesquisar</button>
+        <button type="reset">Limpar</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Raça</th>
+            <th>Tamanho</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>12349984501</td>
+            <td>Max</td>
+            <td>Cachorro</td>
+            <td>Pastor Alemão</td>
+            <td>Grande</td>
+            <td>
+              <a href="../../Pets/EditarPet/EditarPet.html?id=12349984501">Editar</a> | 
+              <a href="../../Pets/VisualizarPet/VisualizarPet.html?id=12349984501">Visualizar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>12349984502</td>
+            <td>Ginger</td>
+            <td>Gato</td>
+            <td>Não definida</td>
+            <td>Pequeno</td>
+            <td>
+              <a href="../../Pets/EditarPet/EditarPet.html?id=12349984502">Editar</a> | 
+              <a href="../../Pets/VisualizarPet/VisualizarPet.html?id=12349984502">Visualizar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</body>
+</html>

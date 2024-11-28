@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualizar Perfil</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Conteúdo Principal -->
+      <main>
+        <header>
+          <h1>Visualizar Perfil</h1>
+        </header>
+
+        <div class="user-details">
+          <div class="user-info">
+            <label for="user-id">ID:</label>
+            <span id="user-id">1</span>
+          </div>
+          <div class="user-info">
+            <label for="created-at">Criado em:</label>
+            <span id="created-at">19/02/2020</span>
+          </div>
+          <div class="user-info">
+            <label for="user-email">Email:</label>
+            <span id="user-email">joaodasilva@pet.com</span>
+          </div>
+          <div class="user-info">
+            <label for="user-name">Nome:</label>
+            <span id="user-name">João da Silva</span>
+          </div>
+          <div class="user-info">
+            <label for="user-role">Função:</label>
+            <span id="user-role">Gerente</span>
+          </div>
+          <div class="user-info">
+            <label for="user-status">Status:</label>
+            <span id="user-status" class="status active">Ativo</span>
+          </div>
+        </div>
+
+        <div class="user-actions">
+          <button class="edit-profile">Editar Perfil</button>
+          <button class="back-button" onclick="window.history.back();">
+            Voltar
+          </button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

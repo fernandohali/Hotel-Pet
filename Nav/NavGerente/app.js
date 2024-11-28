@@ -13,9 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
       html: "../../Reserva/VerReserva/VerReserva.html",
       css: "../../Reserva/VerReserva/styles.css",
     },
-    Reservas: { html: "Reservas/reservas.html", css: "Reservas/styles.css" },
-    CadastrarPets: {
-      html: "../../Pets/CadastrarPets/CadastrarPets.html",
+    Reserva: {
+      html: "../../Reserva/reservas.html",
+      css: "../../Reserva/styles.css",
+    },
+    Pets: {
+      html: "../../Pets/Pets/Pets.html",
+      css: "../../Pets/Pets/styles.css",
+    },
+    CadastrarPet: {
+      html: "../../Pets/CadastrarPets/CadastrarPet.html",
       css: "../../Pets/CadastrarPets/styles.css",
     },
     EditarPet: {
@@ -27,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
       css: "../../Pets/VisualizarPet/styles.css",
     },
     EditarPerfil: {
-      html: "../../Home/EditarPerfil/editarPerfil.html",
-      css: "../../Home/EditarPerfil/styles.css",
+      html: "../../Home/Usuários/EditarPerfil/EditarPerfil.html",
+      css: "../../Home/Usuários/EditarPerfil/styles.css",
     },
     CadastrarPerfil: {
       html: "../../Perfil/cadastrarPerfil.html",
@@ -39,20 +46,20 @@ document.addEventListener("DOMContentLoaded", () => {
       css: "../../Home/Usuários/styles.css",
     },
     CadastrarUsuarios: {
-      html: "../../Cadastro/CadastrarUsuario/CadastrarUsuario.html",
-      css: "../../Cadastro/CadastrarUsuario/styles.css",
+      html: "../../Home/Usuários/CadastrarUsuario/CadastrarUsuario.html",
+      css: "../../Home/Usuários/CadastrarUsuario/styles.css",
     },
     EditarReserva: {
-      html: "../../Editar/editarReserva/editarReserva.html",
-      css: "../../Editar/editarReserva/styles.css",
+      html: "../../Reserva/editarReserva/editarReserva.html",
+      css: "../../Reserva/editarReserva/styles.css",
     },
     EditarReservaEmAndamento: {
-      html: "../../Editar/editarReservaEmAndamento/editarReservaEmAndamento.html",
-      css: "../../Editar/editarReservaEmAndamento/styles.css",
+      html: "../../Reserva/editarReservaEmAndamento/editarReservaEmAndamento.html",
+      css: "../../Reserva/editarReservaEmAndamento/styles.css",
     },
     EditarReservaFinalizada: {
-      html: "../../Editar/editarReservaFinalizada/editarReservaFinalizada.html",
-      css: "../../Editar/editarReservaFinalizada/styles.css",
+      html: "../../Reserva/editarReservaFinalizada/editarReservaFinalizada.html",
+      css: "../../Reserva/editarReservaFinalizada/styles.css",
     },
     Configurar: {
       html: "../../Home/Configurar/configuracoes.html",
@@ -123,11 +130,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Verifique se os campos existem
     if (!reservaStatus || !notaInput || !anotacoesInput) {
-      console.error("Elementos necessários não encontrados na página VerReserva.");
+      console.error(
+        "Elementos necessários não encontrados na página VerReserva."
+      );
       return;
     }
 
-    console.log("reservaStatus:", reservaStatus, "notaInput:", notaInput, "anotacoesInput:", anotacoesInput);
+    console.log(
+      "reservaStatus:",
+      reservaStatus,
+      "notaInput:",
+      notaInput,
+      "anotacoesInput:",
+      anotacoesInput
+    );
 
     if (isGerente && reservaStatus.value === "Finalizada") {
       notaInput.disabled = false;

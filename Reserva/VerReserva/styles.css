@@ -5,10 +5,18 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Remove rolagens horizontais */
+}
+
 /* Contêiner principal */
 .container {
   display: flex;
   min-height: 100vh;
+  overflow: hidden; /* Evita rolagens extras */
 }
 
 /* Sidebar */
@@ -22,6 +30,7 @@
   top: 0;
   left: 0;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Permite rolagem vertical se necessário */
 }
 
 .sidebar h1 {
@@ -56,9 +65,9 @@
   margin-left: 270px; /* Ajustado para não sobrepor a sidebar */
   padding: 30px;
   background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin-top: 20px;
+  overflow-y: auto; /* Permite rolagem apenas no conteúdo principal */
 }
 
 .breadcrumb {
@@ -146,6 +155,10 @@ header h1 {
 
 /* Responsividade */
 @media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
   .reservation-details {
     flex-direction: column;
   }

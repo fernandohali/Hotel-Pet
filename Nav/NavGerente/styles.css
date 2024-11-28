@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #f5f5f5;
   color: #333;
+  overflow-x: hidden; /* Impede a rolagem horizontal global */
 }
 
 .container {
@@ -72,14 +73,15 @@ body {
   flex: 1;
   padding: 20px;
   background-color: #ffffff;
-  margin-left: 240px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   transition: margin-left 0.3s ease;
   overflow-y: auto; /* Habilita rolagem vertical no conteúdo */
   max-height: 100vh; /* Limita a altura para a rolagem funcionar */
+  margin-left: 120px; /* Para alinhar o conteúdo com a barra lateral */
 }
 
+/* Ajuste de responsividade para telas menores */
 header h1 {
   font-size: 26px;
   color: #333;

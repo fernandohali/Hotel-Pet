@@ -4,120 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Usuários</title>
-    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
       <!-- Conteúdo Principal -->
       <main>
         <header>
-          <h1>Hotel Pet</h1>
-          <div class="user-info">João da Silva</div>
+          <h1>Usuários</h1>
         </header>
 
-        <div class="breadcrumb">Home / Usuários</div>
+        <div class="user-actions">
+          <button class="new-user">+ Novo usuário</button>
+          <button class="remove-user">Remover</button>
+          <button class="status-change">Mudar status</button>
+        </div>
 
-        <h2>Usuários</h2>
+        <!-- Filtro de busca -->
+        <div class="filter">
+          <label for="filter">Visualizar Por:</label>
+          <select id="filter">
+            <option value="id">Id</option>
+            <option value="criado-em">Criado em</option>
+            <option value="email">Email</option>
+            <option value="nome">Nome</option>
+            <option value="status">Status</option>
+            <option value="funcao">Função</option>
+          </select>
+          <input type="text" placeholder="Pesquisar..." />
+          <button class="search-button">Pesquisar</button>
+          <button class="clear-button">Limpar</button>
+        </div>
 
-        <button class="new-user">+ Novo Usuário</button>
-
-        <!-- Formulário de Pesquisa -->
-        <form class="search-form">
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" />
-          </div>
-          <div>
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" />
-          </div>
-          <div>
-            <label for="status">Status</label>
-            <select id="status">
-              <option>Ativo</option>
-              <option>Inativo</option>
-            </select>
-          </div>
-          <div>
-            <label for="funcao">Função</label>
-            <select id="funcao">
-              <option>Gerente</option>
-              <option>Funcionário</option>
-              <option>Cliente</option>
-            </select>
-          </div>
-          <div class="form-buttons">
-            <button type="submit" class="search-button">Pesquisar</button>
-            <button type="reset" class="clear-button">Limpar</button>
-          </div>
-        </form>
-
-        <!-- Tabela de Usuários -->
-        <table class="users-table">
+        <!-- Tabela de usuários -->
+        <table class="user-table">
           <thead>
             <tr>
-              <th>Foto</th>
+              <th>Id</th>
+              <th>Criado em</th>
               <th>Email</th>
               <th>Nome</th>
               <th>Função</th>
               <th>Status</th>
-              <th>Criado em</th>
               <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
-                <img
-                  src="path/to/photo.jpg"
-                  alt="João da Silva"
-                  class="user-photo"
-                />
-              </td>
+              <td>1</td>
+              <td>19/02/2020</td>
               <td>joaodasilva@pet.com</td>
               <td>João da Silva</td>
               <td>Gerente</td>
               <td><span class="status active">Ativo</span></td>
-              <td>19/02/2020</td>
               <td>
-                <a href="#">Editar</a> | <a href="#">Visualizar</a> |
-                <a href="#">Remover</a>
+                <div class="action-links">
+                  <a
+                    href="/Home/Usuários/EditarPerfil/EditarPerfil.html"
+                    class="edit-link"
+                    >Editar</a
+                  >
+                  |
+                  <a
+                    href="/Home/Usuários/VisualizarPerfil/visualizarPerfil.html"
+                    class="view-link"
+                    >Visualizar</a
+                  >
+                </div>
               </td>
             </tr>
             <tr>
-              <td>
-                <img
-                  src="path/to/photo.jpg"
-                  alt="Maria da Silva"
-                  class="user-photo"
-                />
-              </td>
+              <td>2</td>
+              <td>19/02/2020</td>
               <td>maria@pet.com</td>
               <td>Maria da Silva</td>
               <td>Funcionário</td>
               <td><span class="status inactive">Inativo</span></td>
-              <td>19/02/2020</td>
               <td>
-                <a href="#">Editar</a> | <a href="#">Visualizar</a> |
-                <a href="#">Remover</a>
+                <div class="action-links">
+                  <a
+                    href="/Home/Usuários/EditarPerfil/EditarPerfil.html"
+                    class="edit-link"
+                    >Editar</a
+                  >
+                  |
+                  <a
+                    href="/Home/Usuários/VisualizarPerfil/visualizarPerfil.html"
+                    class="view-link"
+                    >Visualizar</a
+                  >
+                </div>
               </td>
             </tr>
             <tr>
-              <td>
-                <img
-                  src="path/to/photo.jpg"
-                  alt="José da Silva"
-                  class="user-photo"
-                />
-              </td>
+              <td>3</td>
+              <td>19/02/2020</td>
               <td>josedasilva@pet.com</td>
               <td>José da Silva</td>
               <td>Cliente</td>
               <td><span class="status active">Ativo</span></td>
-              <td>19/02/2020</td>
               <td>
-                <a href="#">Editar</a> | <a href="#">Visualizar</a> |
-                <a href="#">Remover</a>
+                <div class="action-links">
+                  <a
+                    href="/Home/Usuários/EditarPerfil/EditarPerfil.html"
+                    class="edit-link"
+                    >Editar</a
+                  >
+                  |
+                  <a
+                    href="/Home/Usuários/VisualizarPerfil/visualizarPerfil.html"
+                    class="view-link"
+                    >Visualizar</a
+                  >
+                </div>
               </td>
             </tr>
           </tbody>

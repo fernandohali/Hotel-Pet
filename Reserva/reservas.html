@@ -13,13 +13,11 @@
       <!-- Conteúdo Principal -->
       <main>
         <header>
-          <h1></h1>
+          <h1>Reservas</h1>
           <div class="user-info">João da Silva</div>
         </header>
 
         <div class="breadcrumb">Home / Reservas</div>
-
-        <h2>Reservas</h2>
 
         <button class="new-reservation">+ Nova reserva</button>
 
@@ -36,9 +34,9 @@
           <div>
             <label for="status">Status</label>
             <select id="status">
-              <option>Reservada</option>
-              <option>Em progresso</option>
-              <option>Finalizada</option>
+              <option value="reserved">Reservada</option>
+              <option value="in-progress">Em progresso</option>
+              <option value="finished">Finalizada</option>
             </select>
           </div>
           <div>
@@ -80,30 +78,36 @@
               <td>1234984501</td>
               <td>Max</td>
               <td>02/05/2021</td>
-              <td>07/05/2021</td>
               <td><span class="status reserved">Reservada</span></td>
               <td>R$ 40,00</td>
-              <td><a href="#">Editar</a> | <a href="#">Visualizar</a></td>
+              <td>
+                <a href="/Reserva/editarReserva/editarReserva.html">Editar</a> |
+                <a href="/Reserva/VerReserva/VerReserva.html">Visualizar</a>
+              </td>
             </tr>
             <tr>
               <td><input type="checkbox" /></td>
-              <td>1234984501</td>
+              <td>1234984502</td>
               <td>Ginger</td>
               <td>02/05/2021</td>
-              <td>07/05/2021</td>
               <td><span class="status in-progress">Em progresso</span></td>
               <td>R$ 40,00</td>
-              <td><a href="#">Editar</a> | <a href="#">Visualizar</a></td>
+              <td>
+                <a href="/Reserva/editarReserva/editarReserva.html">Editar</a> |
+                <a href="/Reserva/VerReserva/VerReserva.html">Visualizar</a>
+              </td>
             </tr>
             <tr>
               <td><input type="checkbox" /></td>
-              <td>1234984501</td>
+              <td>1234984503</td>
               <td>Max</td>
               <td>02/05/2021</td>
-              <td>07/05/2021</td>
               <td><span class="status finished">Finalizada</span></td>
               <td>R$ 40,00</td>
-              <td><a href="#">Editar</a> | <a href="#">Visualizar</a></td>
+              <td>
+                <a href="/Reserva/editarReserva/editarReserva.html">Editar</a> |
+                <a href="/Reserva/VerReserva/VerReserva.html">Visualizar</a>
+              </td>
             </tr>
           </tbody>
         </table>

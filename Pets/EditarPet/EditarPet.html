@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Pet - Editar Pet</title>
-    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
@@ -42,9 +42,34 @@
           <div class="actions">
             <button type="submit">Salvar</button>
             <button type="reset">Limpar</button>
+            <button type="button" onclick="window.history.back();">
+              Voltar
+            </button>
           </div>
         </form>
       </div>
     </div>
+
+    <script>
+      document
+        .querySelector(".reservation-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Evita o envio padrão do formulário
+
+          const nome = document.getElementById("nome").value.trim();
+          const tipo = document.getElementById("tipo").value.trim();
+          const raca = document.getElementById("raca").value.trim();
+          const tamanho = document.getElementById("tamanho").value.trim();
+
+          if (!nome || !tipo || !raca || !tamanho) {
+            alert(
+              "Por favor, preencha todos os campos obrigatórios marcados com *."
+            );
+          } else {
+            alert("Formulário enviado com sucesso!");
+            this.submit(); // Submete o formulário caso esteja válido
+          }
+        });
+    </script>
   </body>
 </html>

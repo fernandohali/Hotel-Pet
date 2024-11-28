@@ -1,178 +1,57 @@
-/* Estilos gerais */
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
+.pet-details {
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  display: flex;
-  min-height: 100vh;
-  flex-wrap: wrap;
-}
-
-/* Barra lateral */
-.sidebar {
-  width: 220px;
-  background-color: #007bff; /* Azul para a barra lateral */
-  border-right: 1px solid #0056b3; /* Cor mais escura para o borde */
-  padding-top: 20px;
-  flex-shrink: 0;
-}
-
-.sidebar h1 {
-  font-size: 24px;
-  color: white; /* Texto branco para o título */
-  padding: 0 20px;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
-.sidebar ul {
+.pet-details ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
-.sidebar a {
-  color: white; /* Links brancos */
-  text-decoration: none;
+.pet-details li {
+  margin: 10px 0;
   font-size: 16px;
-  display: block;
-  padding: 10px 20px;
-  transition: background 0.3s, color 0.3s;
 }
 
-.sidebar a.active,
-.sidebar a:hover {
-  background-color: #0056b3; /* Destaque em azul escuro */
-  color: white;
-}
-
-/* Conteúdo Principal */
-.main-content {
-  flex: 1;
-  padding: 20px;
-  background-color: #ffffff;
-}
-
-header h1 {
-  font-size: 26px;
-  margin: 0;
-  color: #343a40;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: #6c757d;
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-/* Detalhes do Pet */
-.pet-details {
-  background-color: #fafafa;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 30px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.pet-details h2 {
-  font-size: 22px;
-  color: #007bff;
-  margin-bottom: 15px;
-}
-
-.pet-details p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-.pet-image img {
+.pet-details img.pet-img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin-top: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
-/* Reservas */
-.reservations {
-  background-color: #ffffff;
-  margin-top: 30px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.reservations h3 {
-  margin-top: 0;
-  font-size: 20px;
-  color: #007bff;
-}
-
-.reservations ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.reservations li {
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-/* Ações */
-.actions {
-  display: flex;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.actions button {
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
+.action-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  margin-right: 10px;
 }
 
-.actions button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+.action-btn.edit {
+  background-color: #f0ad4e;
+  color: white;
 }
 
-.actions button:active {
-  background-color: #004085;
+.action-btn.delete {
+  background-color: #d9534f;
+  color: white;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
+.back-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
 
-  .sidebar {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .main-content {
-    padding: 15px;
-  }
+.back-btn:hover {
+  background-color: #31b0d5;
 }

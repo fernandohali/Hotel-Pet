@@ -1,212 +1,106 @@
-/* Estilos gerais */
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f7f8fa; /* Cor de fundo mais suave */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  display: flex;
-  min-height: 100vh;
-  flex-wrap: wrap;
-  background-color: #fff; /* Cor de fundo para a área principal */
-}
-
-/* Barra lateral */
-.sidebar {
-  width: 220px;
-  background-color: #0056b3; /* Azul escuro para contraste */
-  border-right: 2px solid #003366; /* Cor mais escura para a borda */
-  padding-top: 20px;
-  position: fixed;
-  height: 100%;
-  top: 0;
-  left: 0;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.sidebar h1 {
-  font-size: 24px;
-  color: white;
-  padding: 0 20px;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-  padding: 12px 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  border-radius: 6px;
-}
-
-.sidebar a.active,
-.sidebar a:hover {
-  background-color: #003366;
-  transform: translateX(5px);
-}
-
-/* Conteúdo Principal */
-.main-content {
-  flex: 1;
-  padding: 20px;
-  margin-left: 240px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  transition: margin-left 0.3s ease;
-}
-
-header {
-  background-color: #007bff;
-  color: white;
-  padding: 15px 20px;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra no cabeçalho */
-}
-
-header h1 {
-  font-size: 26px;
-  margin: 0;
-}
-
-.user-info {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: #6c757d;
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-/* Formulário */
-.search-form {
-  margin-top: 30px;
-}
-
-.search-form label {
-  font-size: 16px;
-  font-weight: bold;
-  color: #343a40;
-}
-
-input[type="text"],
-textarea {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-top: 8px;
-  background-color: #fff;
-}
-
-textarea {
-  resize: vertical;
-}
-
-button {
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
-  margin-top: 20px;
-}
-
-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-button:active {
-  background-color: #003366;
-}
-
-/* Tabela */
-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-  background-color: #ffffff;
-}
-
-table th,
-table td {
-  padding: 14px;
-  text-align: left;
-  border: 1px solid #ddd;
-}
-
-table th {
-  background-color: #f1f1f1;
-  font-weight: bold;
-}
-
-table td a {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-table td a:hover {
-  color: #0056b3;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-
+  
+  /* Contêiner principal com flexbox */
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Barra lateral */
   .sidebar {
-    width: 100%;
-    position: relative;
-    height: auto;
+    width: 250px;
+    background-color: #007bff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar li {
     margin-bottom: 15px;
   }
-
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+  }
+  
+  .sidebar a.active {
+    font-weight: bold;
+    color: yellow;
+  }
+  
+  /* Conteúdo principal */
   .main-content {
-    margin-left: 0;
-    padding: 15px;
-    box-shadow: none;
+    flex: 1;
+    padding: 20px;
   }
-
-  header h1 {
-    font-size: 22px;
+  
+  /* Cabeçalho */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
   }
-
-  .sidebar ul li a {
-    font-size: 14px;
-    padding: 10px 15px;
+  
+  h1 {
+    font-size: 24px;
+    color: #007bff;
   }
-}
+  
+  .user-info {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Formulário de Cadastro de Novo Pet */
+  .edit-pet-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-pet-form label {
+    font-size: 16px;
+  }
+  
+  .edit-pet-form input,
+  .edit-pet-form select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .edit-pet-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .edit-pet-form button[type="reset"] {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+  }
